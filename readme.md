@@ -111,12 +111,15 @@ All of the dependencies on this object have been met, therefore, the resolution 
 
 ```
 {
-  dep1: '1',
-  dep2: {},
-  dep3: undefined
+  dep1: ['1'],
+  dep2: [{}],
+  dep3: [undefined]
 }
 ```
-It's also important to note that a dependency can only be resolved once and will simply ignore any additional calls. This may change in the future.
+
+The data returned from the dependency is currently stored in an array, allowing a dependency to be run multiple times with each call being collected in the array. This may change in the future.
+
+The order of the data can not be guaranteed at this time.
 
 ## Things to Note
 ---
