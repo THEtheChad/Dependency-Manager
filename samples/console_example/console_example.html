@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title>Test dependency manager</title>
+	<script type="text/javascript" src="../../src/dependencies2.js"></script>
+	<script type="text/javascript" src="dependency_setup.js"></script>
+	<script type="text/javascript" src="dependency_resolution_action.js"></script>
+</head>
+<body>
+	<p>Testing dependency manager</p>
+
+	<!-- At some point resolve dependencies. -->
+	<script type="text/javascript">
+		function resolveDependencies() {
+			DATA.resolve('DOMLoaded');
+			DATA.resolve('pageName', 'order.html');
+			DATA.resolve('productId', 412);
+			DATA.resolve('orderId', 283723);
+			DATA.resolve('userName', 'Chad Awesome');
+		}
+		resolveDependencies();
+	</script>
+</body>
+</html>
